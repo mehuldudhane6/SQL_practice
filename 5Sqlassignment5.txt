@@ -1,0 +1,27 @@
+1)
+
+select * from orders where amt>1000;
+
+2)
+
+select sname, city from salespeople where city='london' and comm>0.10;
+
+3)
+
+select * from customers where city='rome' or not rating <=100;
+
+4)
+
+Select * from Orders where (amt < 1000 OR NOT(odate=‘1990-10-03’ AND cnum > 2003)); 
+
+
+5)
+
+select * from orders where not((odate='1990-10-03' or snum>1006) and amt>=1500);
+
+ans: it will  show the rows/records where amt>=1500 but only when odate and snum is not (odate=1990-10-03 or snum>1006) .
+
+6)
+
+Select snum, sname, city, comm From Salespeople where comm in(.12,.14); 
+

@@ -1,0 +1,24 @@
+assignment 2
+
+1) Which field of the Customers table is the primary key?
+
+Ans:- Cnum is primary key in the Customers table.
+
+
+
+2)What is the 4th column of the Customers table?
+
+Ans:- Customer rating is the 4th Column of Customer Table.
+
+
+
+3) What is another word for row? For column?
+
+Ans:- Another word for row is tuple, entity, opportunity and for column is attribute or method . 
+
+
+
+
+4) Why isn’t it possible to see the first five rows of a table?
+
+Ans->In DBMS data is stored in file format and data is stored sequesntially  but In RDBMS data is stored in tables and each row is file and data  is not stored sequentially. if we want to insert any record in table then DB server will try find free spaces and it will enter that record there this is because to speed up insert statement. and in RDBMS  Rows of table are scatterred(fragmentnd) all over the DB server HD.thats why it is not possible to see first five rows of table.

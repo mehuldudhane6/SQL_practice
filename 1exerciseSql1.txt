@@ -1,0 +1,96 @@
+## CREATE TABLE SEMP 
+
+create table SEMP
+(
+   EMPNO CHAR(4),
+   EMPNAME CHAR(20),
+   BASIC FLOAT(9,2),
+   DEPTNO CHAR(2),
+   DEPTHEAD CHAR(4)
+);
+
+
+2.## CREATE TABLE SDEPT WITH FOLLOWING STRUCTURE
+
+CREATE TABLE SDEPT
+(
+  DEPTNO CHAR(2),
+  DEPTNAME CHAR(15)
+);
+
+3.## INSERT INTO SDEPT TABLE
+
+INSERT INTO SDPET
+VALUES('10', 'DEVELOPEMENT'),
+('20', 'TRAINING');
+
+4.## INSERT INTO SEM TABLE
+
+INSERT INTO SEMP(EMPNO, EMPNAME, BASIC, DEPTNO, DEPTHEAD)
+VALUES('0001', 'SUNIL', 6000, '10', NULL),
+('0002', 'HIREN', 8000, '20', NULL),
+('0003', 'ali', 4000, '10', '0001'),
+('0004', 'george', 6000, NULL, '0002');
+
+5.CREATE S, P, J AND SPJ TABLE
+
+CREATE TABLE S
+(
+   `S#` VARCHAR(20),
+    SNAME VARCHAR(20),
+	STATUS VARCHAR(20),
+	CITY VARCHAR(20)
+);
+
+CREATE TABLE P
+( 
+  `P#` VARCHAR(20),
+  PNAME VARCHAR(20),
+  COLOR VARCHAR(20),
+  WEIGHT FLOAT(3,2),
+  CITY CHAR(20)
+);
+
+CREATE TABLE J
+(
+  `J#` VARCHAR(20),
+  JNAME VARCHAR(20),
+  CITY VARCHAR(20)
+);
+
+CREATE TABLE SPJ
+(
+   `S#` VARCHAR(20),
+   `P#` VARCHAR(20),
+   `J#` VARCHAR(20),
+	QTY INT(10)
+);
+
+insert into s(`s#`,status)
+values('s1','10'),
+('s2','20'),
+('s3','30');
+
+
+5. select * from s;
+
+6.select `s#`, sname from s;
+
+7.select pname, color from p where city='London';
+
+8.select * from s where city='london' ;
+
+9.select * from s where city='paris' or city='athens';
+
+10.select jname from j where city="athens";
+
+11.select pname from where weight between 12 and 14;
+
+12.select * from s where status >=20;
+
+13.select * from s where city!='london';
+
+14.select city from s;
+
+15.select weight*1000 as 'miligram', weight/1000 as 'kilogram' from p;
+
