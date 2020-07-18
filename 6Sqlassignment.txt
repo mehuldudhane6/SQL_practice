@@ -1,0 +1,22 @@
+assignment 6
+
+1) 
+
+select * from orders where odate='1990-10-03';
+select * from orders where odate='1990-10-04;
+
+2)
+
+select * from customers where snum in (select snum from salespeople where sname='peel' or sname='motika');
+
+3)
+
+select * from customers where cname  regexp'^[a-g]';
+
+4)
+
+select * from customers where cname like 'c%';
+
+5)
+
+select * from orders where amt=0 or amt=null;

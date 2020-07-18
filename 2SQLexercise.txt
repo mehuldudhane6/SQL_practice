@@ -1,0 +1,29 @@
+sql exercise 2
+
+1)
+
+select sname from s order by city desc;
+
+2)
+
+select * from p order by city asc, pname desc;
+
+3)
+
+select sname from s where status between 10 and 20;
+
+4)
+
+select pname, weight from p where weight between 10 and 15;
+
+5)
+
+select pname from p where pname like 's%';
+
+6)
+
+select * from s where city like 'l%';
+
+7)
+
+select jname from j where jname like '--n%';
