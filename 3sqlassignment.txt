@@ -1,0 +1,22 @@
+sql exercise 3
+
+
+1) select concat(upper(substring(sname,1,1)),lower(substring(sname,2))) from s;
+
+2)select upper(sname) from s;
+
+3)select lower(sname) from s;
+
+4)select lpad(sname,25, ' ') from s;
+
+5)select replace(sname, 'la', 'ro') from s;
+
+6)select replace(replace(sname, 'l', 'r'),'r','a');
+
+7)select sname, length(sname) from s;
+
+8)select * from s where soundex(sname)=soundex('BLOKE');
+
+
+10)select dayname(current_date);
+
