@@ -1,0 +1,7 @@
+ASSIGNMENT 10
+
+1)select first.sname,second.sname from salespeople first,salespeople second where first.city=second.city and 
+first.sname<second.sname
+
+
+2) select cname,city from customers where rating in(select rating from customers where cnum=2001);

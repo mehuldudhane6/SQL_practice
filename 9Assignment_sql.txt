@@ -1,0 +1,11 @@
+ASSIGNMENT 9
+
+1)select orders.onum, customers.cname from orders,customers where customers.cnum=orders.cnum; 
+
+2)select customers.cname, salespeople.sname, orders.onum from orders,customers,salespeople where customers.snum=orders.snum=salespeople.snum;
+
+3)select salespeople.sname, customers.cname , salespeople.comm from salespeople join customers  on salespeople.snum=customers.snum where comm>0.12;
+                                 OR 
+3)select salespeople.sname, customers.cname , salespeople.comm from salespeople, customers where salespeople.snum=customers.snum having comm>0.12;
+
+4) select orders.onum, (salespeople.comm*orders.amt) as 'amount of salesperson commision' from orders,salespeople,customers where customers.snum=orders.snum=salespeople.snum having rating>100;
