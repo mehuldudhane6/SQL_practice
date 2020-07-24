@@ -1,0 +1,8 @@
+assignment 11
+
+1) select * from orders where cnum=(select cnum from customers where cname='cisneros');
+
+
+2)select cname,rating,amt from customers inner join orders on orders.cnum=customers.cnum having amt>(select avg(amt) from orders);
+
+3)select salespeople.sname,sum(amt) from orders,salespeople where salespeople.snum=orders.snum group by salespeople.snum having sum(amt)>max(amt);
