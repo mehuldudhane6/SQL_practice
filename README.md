@@ -1,2 +1,2 @@
-# SQL_practice
+# SQL_practice1
 assignments
