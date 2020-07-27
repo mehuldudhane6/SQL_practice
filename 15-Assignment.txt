@@ -1,0 +1,14 @@
+ASSIGNMENT 15
+  
+
+
+1)
+ create table multicast as multicust as select * from salespeople where 1=2;
+ 
+ insert into multicast select * from salespeople where snum =any(select snum from orders group by snum having count(snum) > 1);
+
+2)
+delete from customers where not exists(select cnum from orders where orders.cnum=customers.cnum);
+
+
+3) update salespeople set comm=comm*1.2 where snum in(select snum from orders having sum(amt)>(select sum(amt) from orders group by snum having sum(amt)>3000));
