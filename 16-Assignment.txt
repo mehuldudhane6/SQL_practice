@@ -1,0 +1,11 @@
+ASSIGNMENT 16
+
+1)create index i_order_odate on orders(odate);
+select odate,count(*) from orders group by odate;
+
+2)alter table orders add unique(onum);
+
+3) create index i_salespeople_snum on salespeople(snum);
+select salespeople.*,odate from salespeople right join orders on salespeople.snum=orders.snum group by odate,snum;
+
+4)alter table customers add unique(cnum,rating);

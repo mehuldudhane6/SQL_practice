@@ -1,0 +1,20 @@
+SQL EXERCISE 4
+
+1)select min(status) from supplier;
+
+2)select max(weight) from parts;
+
+3)select avg(weight) from parts;
+
+4)select `p#`, qty from supplier_parts_project where `p#`='p1';
+
+5)select  `p#`,qty from supplier_parts_project group by `p#`;
+
+6)select  `p#`,avg(qty) from supplier_parts_project group by `p#`;
+
+7)select max(qty) as "maxqty" from supplier_parts_project where qty > 800 group by `p#`;
+
+9)select count(distinct jname),city from project group by city;
+
+10)count(status) does nout count NULL value rows but count(*) counts NULL value rows.
+

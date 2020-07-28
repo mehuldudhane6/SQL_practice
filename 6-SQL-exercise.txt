@@ -1,0 +1,18 @@
+1)select * from s where status in(select status from s where sname='clark') and sname <> 'clark';
+
+2)select * from emp where deptno=(select deptno from emp where empname='miller');
+
+3)select * from p where weight>(select weight from p where colour='red');
+
+4)select * from j where city=(select city from j where jname='tape');
+
+5)select * from p where weight<(select weight from p where colour='green');
+
+6)select * from s where `s#`=(select `s#` from spj where qty=(select max(qty) from spj));
+
+7)select * from emp where sal=(select min(sal) from emp); 
+
+8)select sname,city, max(sum_qua) from (select sname,city, sum(qty) as 'sum_qua' from s,spj where s.`s#`=spj.`s#` group by s.`s#`) as tempp;
+
+9)select deptno,max(count) from (select deptno,count(*) count from emp group by deptno) as tempp; 
+

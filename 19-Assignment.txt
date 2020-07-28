@@ -1,0 +1,21 @@
+ASSIGNMENT 19
+
+1) create view v_customers
+   as
+   select * from customers where rating=(select max(rating) from customers);
+   
+2)
+  create view v_salespeople
+  as 
+  select city,count(sname) from salespeople group by city;
+  
+3)  create view v_orders
+    as 
+	select sname,sum(amt) total, avg(amt) average from orders,salespeople where salespeople.snum=orders.snum group by orders.snum;
+	
+4)  
+	select customers.snum,sname, cname from salespeople , customers where 
+	salespeople.snum=customers.snum having customers.snum=
+	(select snum from((select count(cnum) ,snum from customers group by snum having count(snum)>1))as tempp);
+
+
