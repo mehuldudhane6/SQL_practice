@@ -1,0 +1,35 @@
+ASSIGNMENT 17
+
+1)
+	create table order1
+	(	
+	Onum int(4) primary key,
+	Amt int(4),
+	Odate  date not null,
+	Cnum int(4),
+	Snum int(4),
+	constraint uq_CnumSnum unique(Cnum,Snum)	
+	);
+
+2)
+	create table Salespeople1
+	(
+	Snum int ,
+	Sname varchar(20),
+	check(Sname regexp '^[A-M]'),
+	City varchar(20),
+	Comm float default 0.1
+	) ;
+	 
+3)
+
+	create table Orders1
+		(
+		Onum int(4) primary key,
+		amt int(4),
+		Odate date not null,
+		Cnum int(4) not null,
+		Snum int(4) not null,
+		check(Onum>Cnum and Cnum>Snum)
+		);
+   	 

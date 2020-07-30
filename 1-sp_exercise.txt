@@ -1,0 +1,111 @@
+STORED PROCEDURE EXERCISE 1
+
+1
+	delimiter !
+	create procedure cal_perimeter()
+	begin
+	   declare L int(10) default 10;
+	   declare W int(10) default 20;
+	   declare area int(10);
+	   declare perimeter int(10);
+	   set area=(L*W);
+	   
+	   set perimeter=(2*(L+W));
+	   insert into result values(area,perimeter);
+	end;!
+	delimiter ;
+
+------------------------------------------------------------------------------------------------	
+2.
+     delimiter !
+	 create procedure sp_cubeSq()
+	 begin
+	      declare num int default 15;
+		  declare square1 int;
+		  declare cube1 int;
+		  set square1=(num*num);
+		   
+		  set cube1=(num*num*num);
+		  insert into result values(num,null);
+		  insert into result values(square1,cube1);
+	 end;!
+	 delimiter;
+
+-----------------------------------------------------------------------------------------------	 
+3.
+ I)
+   delimiter !
+   create procedure sp_tempconversion()
+   begin
+        declare tempD int default 20;
+		declare tempF int;
+		set tempF=((9/5)*tempD);
+		
+		insert into result values(tempF,null);
+  end;!
+  delimiter ;
+  
+     -------------------------------------------------
+   II)
+   
+   delimiter !
+    create procedure sp_tempconversion()
+    begin
+       declare tempFT int default 90;
+		declare tempC int;
+		set tempC=((tempFT-32)*(5/9));
+		
+		insert into result values(tempC,null);
+  end;!
+  delimiter ;
+  
+  --------------------------------------------------------------------------------------------
+  
+  4)
+      
+    	delimiter //
+	create procedure inch_conv(inch int)
+	begin
+	   declare yard int;
+	   declare foot int;
+	   declare inches int;
+    
+    	   set yard = inch / 36;
+    	   set foot = (inch % 36) / 12;
+    	   set inches = inch -( (foot * 12) + ( yard * 36 ) ) ;
+    	   select inch,yard,foot,inches from dual;
+	end;//
+	delimiter ;
+  
+  ------------------------------------------------------------------------------------
+  5)
+  
+    delimiter @
+	create procedure sp_check_divsibility(num int)
+	begin
+	    declare msg char(50);
+	    if num mod 5=0 then
+		   set msg='number divisible by 5';
+		   insert into checktable values(msg);
+		end if;
+	end; @
+	delimiter ;
+	
+	
+------------------------------------------------------------------------------------------	
+	
+6)
+   delimiter #
+   create procedure sp_check_product(x int , y int)
+   begin
+       declare pro int;
+	   declare msg char(50);
+	   set pro=x*y;
+	   if pro > 100 then
+	      set msg='product of two no. greater than 100';
+		  insert into checktable values(msg);
+       end if;
+    end; #
+    delimiter ;	
+	   
+   
