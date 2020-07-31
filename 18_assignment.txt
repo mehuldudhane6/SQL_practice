@@ -1,0 +1,12 @@
+1)
+
+create table CityOrders 
+	select onum,amt,snum,cnum,city from orders NATURAL JOIN customers;
+
+	ALTER TABLE cityorders add constraint on_FK FOREIGN KEY(onum) REFERENCES ORDERS(onum);
+	
+	
+2)
+
+   alter table customers add constraint pk_cust primary key(cnum);
+	alter table orders add constraint foreign key(cnum) references customers(cnum);
