@@ -1,0 +1,63 @@
+ASSIGNMENT 20
+
+1  Create View Dailyorders    
+as Select Distinct cnum, snum, onum, odate from Orders;
+  
+ANS:- Not Updatable
+
+2  Create View Custotals    
+as Select cname, Sum (amt) Sum_Amt from Orders, Customers   
+where Orders.cnum=Customers.cnum  Group by cname;  
+
+ANS:- Not Updatable
+
+3  Create view Thirdorders  
+as Select * from Dailyorders  where odate=’1990-10-03’;  
+
+ANS:- Updatable
+
+4  Create view Nullcities     
+as Select snum, sname, city  from Salespeople  where city is NULL  
+ OR sname BETWEEN ‘A’ and ‘MZ’;  
+
+ANs:- Updatable
+
+----------------------------------------------------------------------------------------------------
+
+Q 2
+
+   create view commission as select snum,comm from salespeople 
+	where comm between 0.10 and 0.20 with check option;
+	
+---------------------------------------------------------------------------------------------
+Q 3
+
+create table orders2
+      (
+	
+      	Onum int(4),	
+	
+     	Amt float(7,2), 		
+	
+	   Odate date default current_timestamp,
+	
+	    cnum int(4), 
+	
+	   snum int (4)
+	
+    );
+	
+	
+
+	Insert into Orders1 (Onum, Amt, Cnum, Snum) values(1001, 1927.23,2001,3001);
+
+	
+	create view Entryorders
+  	
+	 as 
+	
+	select * from orders1;
+
+    
+
+  
